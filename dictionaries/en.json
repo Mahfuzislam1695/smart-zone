@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "SmartZone POS — The phone shop's ledger, by IMEI",
+    "description": "POS for mobile phone and accessories shops in Bangladesh: IMEI stock, sales, dues, installments, trade-ins and daily cash, in Bangla and English.",
+    "dashboard": "Dashboard",
+    "pos": "Point of sale",
+    "login": "Log in",
+    "signup": "Create account"
+  },
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "login": "Log in",
+    "trial": "Try free for 14 days",
+    "menu": "Open menu",
+    "close": "Close menu"
+  },
+  "lang": {
+    "label": "বাংলা",
+    "short": "বাং",
+    "aria": "বাংলায় দেখুন"
+  },
+  "hero": {
+    "title": "Your shop's khata, one scan away",
+    "sub": "Every phone is known by its IMEI. Who bought it, for how much, what's still owed, when the warranty ends: scan it and it's all there. Built for mobile phone shops.",
+    "primary": "Try free for 14 days",
+    "secondary": "See the demo",
+    "note": "No card needed. We help you set up."
+  },
+  "demo": {
+    "label": "Scan an IMEI and see",
+    "placeholder": "15-digit IMEI",
+    "scan": "Scan",
+    "hint": "A demo IMEI is filled in. Press Enter or tap Scan.",
+    "notFound": "That IMEI isn't in the demo. Try one of these.",
+    "tryThis": "Demo IMEIs:",
+    "statusSold": "Sold",
+    "statusInStock": "In stock",
+    "profit": "Profit on this phone",
+    "receiptTitle": "Invoice",
+    "receiptThanks": "Thank you, come again",
+    "receiptDue": "Due",
+    "receiptPaid": "Paid"
+  },
+  "khata": {
+    "title": "Dues written in a khata get lost. Not here.",
+    "sub": "Who owes what, for how long, and when they last paid is worked out for you. Remind them by SMS with one tap.",
+    "paperCaption": "Before: flipping pages, crossed-out lines, guesswork.",
+    "appCaption": "Now: sorted by amount and age, every taka accounted for.",
+    "appTitle": "Customer dues",
+    "remind": "Send SMS",
+    "days": "days",
+    "total": "Total due"
+  },
+  "day": {
+    "title": "A day at the counter, start to finish",
+    "sub": "From opening the cash drawer in the morning to matching it at night, in one place.",
+    "steps": [
+      { "time": "9:00 AM", "title": "Cash drawer opened", "body": "Session starts with a ৳5,000 float. Who sat at the counter, and when, is recorded." },
+      { "time": "11:30 AM", "title": "An A15 sold", "body": "Scan the IMEI on the box, add the customer's number, take part payment by bKash. The rest goes on their account. Invoice prints." },
+      { "time": "4:00 PM", "title": "An old due collected", "body": "Karim bhai pays ৳1,500. A receipt prints and he gets an SMS." },
+      { "time": "6:15 PM", "title": "A used phone bought", "body": "An iPhone 11 taken in exchange. Seller's NID, battery %, and grade recorded, and it's in stock." },
+      { "time": "9:30 PM", "title": "Cash matched", "body": "The system expects ৳62,300 in the drawer. You count ৳62,300. Difference: zero." }
+    ]
+  },
+  "features": {
+    "title": "Made for mobile phone shops",
+    "sub": "What general shop software leaves out is exactly what a phone business needs most.",
+    "items": [
+      { "title": "Every phone by IMEI", "body": "Dual IMEI, serial, purchase cost, which branch it's in: the full history of every unit." },
+      { "title": "Installments (EMI)", "body": "Down payment, due dates, guarantor, late fees. An SMS goes out before each due date." },
+      { "title": "Used phones and exchange", "body": "Buy in with the seller's NID and the phone's condition recorded, then apply it against a new sale." },
+      { "title": "Warranty claims", "body": "Scan the IMEI to see if it's under warranty. Track it from the service center and back to the customer." },
+      { "title": "Real profit", "body": "Profit uses each phone's own purchase cost, not an average guess." },
+      { "title": "Bangla invoices", "body": "80mm thermal or A4. Every phone's IMEI and warranty are printed on the invoice." },
+      { "title": "Multiple branches", "body": "Stock and cash per branch, and stock transfers between branches." },
+      { "title": "Staff permissions", "body": "Decide how much discount a cashier can give and whether they see cost prices." }
+    ]
+  },
+  "pricing": {
+    "title": "Priced for the size of your shop",
+    "sub": "Every plan starts with 14 days free. Pay monthly or yearly with bKash or Nagad.",
+    "perMonth": "/month",
+    "yearlyNote": "2 months free when paid yearly",
+    "popular": "Most shops choose this",
+    "choose": "Get started",
+    "unlimited": "Unlimited",
+    "basic": "Basic",
+    "full": "Full",
+    "rows": {
+      "branches": "Branches",
+      "users": "Users",
+      "products": "Products (variants)",
+      "sms": "SMS per month",
+      "imei": "IMEI, installments, exchange, warranty",
+      "transfers": "Stock transfers between branches",
+      "roles": "Custom staff roles",
+      "reports": "Reports and export"
+    },
+    "plans": {
+      "starter": { "name": "Starter", "blurb": "One-counter shops" },
+      "growth": { "name": "Growth", "blurb": "Bigger shops, 2–3 branches" },
+      "pro": { "name": "Pro", "blurb": "Many branches and wholesale" }
+    }
+  },
+  "faq": {
+    "title": "Questions",
+    "items": [
+      { "q": "Does it work without internet?", "a": "It runs online and works well on mobile data. Pages are light, so it stays usable on a slow connection." },
+      { "q": "Will my scanner and printer work?", "a": "Any USB or Bluetooth barcode scanner and any 80mm thermal printer works. We help you set them up." },
+      { "q": "How long does moving from the khata take?", "a": "Import products and IMEIs from Excel in one go. Enter old dues as opening balances and you're running from day one." },
+      { "q": "Is my data safe?", "a": "It's backed up daily. Only your staff can see your shop's data, and you can download all of it at any time." },
+      { "q": "How do I pay?", "a": "bKash, Nagad or card. Monthly or yearly." },
+      { "q": "What if I want to stop?", "a": "Cancel any time. Your data stays viewable and downloadable for 90 days after you cancel." }
+    ]
+  },
+  "cta": {
+    "title": "Set up your shop today",
+    "sub": "Try it free for 14 days. We'll help you bring over your products and old dues.",
+    "primary": "Create a free account",
+    "call": "Call us"
+  },
+  "footer": {
+    "tagline": "POS for mobile phone and accessories shops in Bangladesh.",
+    "product": "Product",
+    "company": "Company",
+    "contact": "Contact",
+    "about": "About",
+    "privacy": "Privacy policy",
+    "terms": "Terms",
+    "rights": "All rights reserved."
+  },
+  "auth": {
+    "loginTitle": "Welcome back",
+    "loginSub": "Log in to your shop's account.",
+    "identifier": "Mobile number or email",
+    "identifierHint": "e.g. 01712345678",
+    "password": "Password",
+    "forgot": "Forgot password?",
+    "remember": "Keep me logged in on this device",
+    "submit": "Log in",
+    "noAccount": "No account yet?",
+    "signupLink": "Create a free account",
+    "signupTitle": "Create your shop account",
+    "signupSub": "14 days free. No card needed.",
+    "shopName": "Shop name",
+    "yourName": "Your name",
+    "mobile": "Mobile number",
+    "createPassword": "Password (at least 8 characters)",
+    "signupSubmit": "Create account",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Log in",
+    "panelLine": "Every phone, every taka, accounted for.",
+    "panelSub": "IMEI stock, dues, installments and daily cash.",
+    "demoNote": "Demo: login isn't connected yet. The button opens the dashboard."
+  },
+  "app": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "pos": "Point of sale",
+      "sales": "Sales",
+      "customers": "Customers & dues",
+      "inventory": "Stock & IMEI",
+      "purchases": "Purchases & suppliers",
+      "installments": "Installments",
+      "afterSales": "Returns & warranty",
+      "cash": "Cash & expenses",
+      "reports": "Reports",
+      "sms": "SMS",
+      "settings": "Settings"
+    },
+    "navGroups": {
+      "sell": "Sell",
+      "stock": "Stock",
+      "money": "Money",
+      "admin": "Admin"
+    },
+    "branch": "Main branch",
+    "branchLabel": "Branch",
+    "search": "Search IMEI, mobile number or invoice",
+    "openPos": "New sale",
+    "demoBanner": "Showing demo data. Real figures appear once the database is connected.",
+    "userName": "Rashed",
+    "userRole": "Owner",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "dashboard": {
+      "title": "Today",
+      "kpi": {
+        "sales": "Sales today",
+        "invoices": "invoices",
+        "profit": "Profit today",
+        "profitNote": "after purchase cost",
+        "cash": "Cash in drawer",
+        "cashNote": "Session opened 9:02 AM",
+        "dues": "Total dues",
+        "duesNote": "customers owe"
+      },
+      "chartTitle": "Sales, last 30 days",
+      "chartSub": "Each bar is one day",
+      "alertsTitle": "Needs attention today",
+      "alerts": {
+        "installments": "installments due today",
+        "overdue": "installments overdue",
+        "lowStock": "products low on stock",
+        "warranty": "warranty phones back from service"
+      },
+      "recentTitle": "Recent sales",
+      "viewAll": "View all",
+      "table": {
+        "invoice": "Invoice",
+        "time": "Time",
+        "customer": "Customer",
+        "item": "Item",
+        "imei": "IMEI",
+        "total": "Total",
+        "status": "Status"
+      },
+      "status": {
+        "paid": "Paid",
+        "due": "Due"
+      },
+      "walkIn": "Walk-in"
+    },
+    "placeholder": {
+      "body": "This section is still being built.",
+      "phase": "Roadmap",
+      "back": "Back to dashboard",
+      "spec": "Feature details are in docs/02-feature-spec.md"
+    },
+    "modules": {
+      "sales": { "title": "Sales", "body": "All invoices, filters, reprints, same-day voids.", "phase": "Phase 1" },
+      "customers": { "title": "Customers & dues", "body": "Customer profiles, due ledger, collections, statements.", "phase": "Phase 1" },
+      "inventory": { "title": "Stock & IMEI", "body": "Stock per branch, IMEI history, opening stock, adjustments.", "phase": "Phase 1" },
+      "purchases": { "title": "Purchases & suppliers", "body": "Receive stock by scanning IMEIs, supplier payables and payments.", "phase": "Phase 1" },
+      "installments": { "title": "Installments", "body": "Installment plans, schedules, collections, overdue lists.", "phase": "Phase 2" },
+      "afterSales": { "title": "Returns & warranty", "body": "Returns, exchanges, warranty claims, used-phone buy-back.", "phase": "Phase 2" },
+      "cash": { "title": "Cash & expenses", "body": "Cash sessions, expenses, cash book, daily closing.", "phase": "Phase 1" },
+      "reports": { "title": "Reports", "body": "Sales, profit, stock, dues, supplier payables.", "phase": "Phase 1–2" },
+      "sms": { "title": "SMS", "body": "Invoice and due SMS, templates, balance.", "phase": "Phase 2" },
+      "settings": { "title": "Settings", "body": "Shop details, invoices, payment methods, staff and roles.", "phase": "Phase 1" }
+    }
+  },
+  "pos": {
+    "scanPlaceholder": "Scan an IMEI or barcode, or type a name",
+    "customer": "Customer",
+    "customerPlaceholder": "Search by mobile number",
+    "walkIn": "Walk-in customer",
+    "previousDue": "Previous due",
+    "item": "Item",
+    "qty": "Qty",
+    "price": "Price",
+    "total": "Total",
+    "remove": "Remove",
+    "empty": "Cart is empty",
+    "emptyHint": "Scan the IMEI barcode on the box, or tap a demo code below.",
+    "subtotal": "Subtotal",
+    "discount": "Discount",
+    "grandTotal": "Total",
+    "paid": "Paid",
+    "due": "Due",
+    "change": "Change",
+    "payments": "Payments",
+    "noPayments": "Tap a payment method to fill in the remaining amount.",
+    "methods": {
+      "cash": "Cash",
+      "bkash": "bKash",
+      "nagad": "Nagad",
+      "card": "Card"
+    },
+    "hold": "Hold",
+    "held": "Cart held",
+    "tradeIn": "Exchange",
+    "pay": "Pay & print",
+    "dueNeedsCustomer": "Pick a customer to leave a due",
+    "cartEmpty": "The cart is empty",
+    "alreadyInCart": "This IMEI is already in the cart",
+    "notFound": "Nothing found",
+    "added": "Added",
+    "demoCodes": "Demo codes",
+    "demoNote": "Demo catalog. Real stock appears once the database is connected.",
+    "session": "Cash session open",
+    "cashier": "Cashier",
+    "exit": "Dashboard",
+    "receipt": {
+      "invoice": "Invoice",
+      "date": "Date",
+      "customer": "Customer",
+      "warranty": "Warranty",
+      "months": "months",
+      "thanks": "Thank you, come again",
+      "terms": "Warranty is honored against the IMEI. Keep this invoice.",
+      "print": "Print",
+      "newSale": "New sale",
+      "title": "Sale complete"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The link may be wrong, or the page has moved.",
+    "home": "Go home"
+  }
+}

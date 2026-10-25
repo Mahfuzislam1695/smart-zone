@@ -1,26 +1,255 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  SmartZone POS — "Khata ink" theme. See docs/13-brand.md.
+  Red (--due) means money owed. Use it for dues, overdue and destructive actions only,
+  plus the khata margin rule motif.
+*/
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --paper: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #eef1f5;
+  --fg: #161a23;
+  --muted-fg: #5b6272;
+  --rule: #dde1e8;
+  --rule-strong: #c5ccd8;
+
+  --ink: #1d3fbf;
+  --ink-deep: #132a80;
+  --ink-soft: #e8edfc;
+  --on-ink: #ffffff;
+
+  --due: #d93246;
+  --due-soft: #fdecee;
+  --paid: #11865a;
+  --paid-soft: #e4f5ed;
+  --warn: #b7791f;
+  --warn-soft: #fbf1df;
+
+  --khata-line: #c9d6f2;
+  --receipt: #fdfdfb;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow-lift: 0 1px 2px rgb(22 26 35 / 0.06), 0 8px 24px -12px rgb(19 42 128 / 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #0e1220;
+    --surface: #161b2c;
+    --surface-2: #1e2438;
+    --fg: #e8eaf0;
+    --muted-fg: #9aa3b5;
+    --rule: #2a3149;
+    --rule-strong: #3a4360;
+
+    --ink: #6f8bff;
+    --ink-deep: #93a8ff;
+    --ink-soft: #1d2650;
+    --on-ink: #0e1220;
+
+    --due: #ff6b7a;
+    --due-soft: #3a1a22;
+    --paid: #3cc48a;
+    --paid-soft: #143326;
+    --warn: #e9b44c;
+    --warn-soft: #36290f;
+
+    --khata-line: #243058;
+    --receipt: #f4f4f0;
+    --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.4), 0 10px 30px -14px rgb(0 0 0 / 0.6);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted-fg);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink-soft: var(--ink-soft);
+  --color-on-ink: var(--on-ink);
+  --color-due: var(--due);
+  --color-due-soft: var(--due-soft);
+  --color-paid: var(--paid);
+  --color-paid-soft: var(--paid-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-receipt: var(--receipt);
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anek), var(--font-body), sans-serif;
+  --font-hand: var(--font-galada), var(--font-body), cursive;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-lg);
+  --shadow-lift: var(--shadow-lift);
+
+  /* Type scale (1.25): 13 / 15 / 17 / 21 / 26 / 33 / 41 / 52 / 64 */
+  --text-2xs: 0.8125rem;
+  --text-ui: 0.9375rem;
+  --text-body: 1.0625rem;
+  --text-h5: 1.3125rem;
+  --text-h4: 1.625rem;
+  --text-h3: 2.0625rem;
+  --text-h2: 2.5625rem;
+  --text-h1: 3.25rem;
+  --text-hero: 4rem;
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--paper);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: var(--text-ui);
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+  }
+  :lang(bn) body {
+    line-height: 1.7;
+  }
+  ::selection {
+    background: var(--ink-soft);
+    color: var(--fg);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  /* Anek Bangla's width axis is the brand's headline voice. */
+  .type-wide {
+    font-variation-settings: "wdth" 116;
+  }
+  .type-narrow {
+    font-variation-settings: "wdth" 88;
+  }
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Khata page: ruled lines + red margin rule */
+  .khata-ruled {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 39px,
+      var(--khata-line) 39px,
+      var(--khata-line) 40px
+    );
+  }
+  .khata-margin {
+    position: relative;
+  }
+  .khata-margin::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: var(--margin-x, 2.5rem);
+    width: 2px;
+    background: var(--due);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  /* Thermal receipt: torn bottom edge */
+  .receipt-edge {
+    --tooth: 8px;
+    mask:
+      linear-gradient(#000 0 0) top / 100% calc(100% - var(--tooth)) no-repeat,
+      conic-gradient(from 135deg at top, #000 90deg, #0000 0) bottom / calc(var(--tooth) * 2) var(--tooth) repeat-x;
+  }
+}
+
+/* One orchestrated motion: the hero IMEI scan reveal. */
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes print-feed {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes laser {
+  0%, 100% {
+    transform: translateY(-14px);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(14px);
+    opacity: 1;
+  }
+}
+.anim-row {
+  animation: row-in 360ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.anim-print {
+  animation: print-feed 900ms steps(18, end) both;
+}
+.anim-laser {
+  animation: laser 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-row,
+  .anim-print,
+  .anim-laser {
+    animation: none !important;
+  }
+}
+
+/* Printing: only the element marked .print-area is printed (POS receipts). */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 72mm;
+    box-shadow: none !important;
+  }
+  @page {
+    size: 80mm auto;
+    margin: 4mm;
+  }
 }
